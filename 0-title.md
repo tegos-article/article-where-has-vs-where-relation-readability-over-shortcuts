@@ -1,0 +1,1 @@
+# whereHas() vs whereRelation(): Readability Over Shortcuts
