@@ -78,9 +78,10 @@ User::query()->whereRelation('profile', 'is_verified', true)->count();
 
 That's simple enough. But as soon as your logic gets even a little more complicated, just reach for `whereHas()`. It's clearer and won't confuse your future self or your teammates.
 
-## The Performance Myth
+## Performance Question
 
-A lot of devs steer clear of  `whereHas()` because someone told them it's slow. That's a different discussion entirely and usually the problem is missing indexes, or it's time to go with the query builder, but not the method itself.
+A lot of devs steer clear of  `whereHas()` because someone told them it's slow. That's a different discussion entirely and usually the problem is missing indexes, or it's time to go with the query builder.
+If you're filtering on profiles.is_verified and don't have an index, both whereHas() and whereRelation() will be slow, they generate nearly identical SQL.
 
 But here's a practical issue: imagine you join a new project and get a ticket saying "the users endpoint is slow." What's your move? Search the codebase for relationship queries and check if proper indexes exist.
 
