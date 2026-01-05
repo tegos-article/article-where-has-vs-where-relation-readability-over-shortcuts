@@ -20,4 +20,4 @@ For anything that matters, prefer `whereHas()` for clarity and consistency.
 
 ## 📎 Read Full
 
-[whereHas() vs whereRelation(): Readability Over Shortcuts](#)
+[whereHas() vs whereRelation(): Readability Over Shortcuts](https://dev.to/tegos/wherehas-vs-whererelation-readability-over-shortcuts-1gk0)
